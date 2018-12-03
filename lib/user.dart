@@ -13,6 +13,7 @@ class User {
   }
 
   bool logIn(String authKey){
+    
     if(authKey == storedKey){
       return true;
     }
