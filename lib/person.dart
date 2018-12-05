@@ -1,14 +1,14 @@
-import 'holon.dart';
-import 'holonList.dart';
+import 'sector.dart';
+import 'sectorList.dart';
 
 class Person{
 
   String id, storedKey;
 	double worth, spent, balance = 0;
-	List<Holon> holons;
+	List<Sector> holons;
   bool acsessStatus = false;
 	
-	Person(String id, String storedKey, List<Holon> holons) {
+	Person(String id, String storedKey, List<Sector> holons) {
 		this.id = id;
     this.storedKey = storedKey;
 		this.holons = holons;
@@ -25,11 +25,11 @@ class Person{
     acsessStatus = false;
   }
 
-	void setHolons(List<Holon> h) {
+	void setHolons(List<Sector> h) {
 		holons = h;
 	}
 	
-	List<Holon> getHolons(){
+	List<Sector> getHolons(){
 		return holons;
 	}
 	

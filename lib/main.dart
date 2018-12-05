@@ -1,7 +1,7 @@
 import 'user.dart';
 import 'accountManager.dart';
-import 'inputHandler.dart';
 import 'dart:io';
+import 'databaseHandler.dart';
 
 File storedUsers = new File('lib/userList.txt');
 List<User> userList = new List<User>();
@@ -16,21 +16,9 @@ void listInit(){
 
 void main(){
   listInit();
-  InputHandler input = new InputHandler();
   AccountManager accMgr = new AccountManager(userList);
-  print(accMgr.createUser('testUser', 'storedKey123'));
-  /*
-  dumpster fire, ignore for now
-  while(true){
-    //placeholder logic that relies on commandline instead of web based commands
-    String command = stdin.readLineSync();
-    if(input.compareStrings(command, "newUser")){
-      print('1');
-      String userInfo = stdin.readLineSync();
-      int breakPoint = userInfo.indexOf(",");
-      accMgr.createUser(userInfo.substring(0,breakPoint), userInfo.substring(breakPoint,userInfo.length));
-      userList = accMgr.updateList();
-    }
-  }
-  */
+  DatabaseHandler db = new DatabaseHandler();
+  //db.loadTest();
+  db.dbTest();
+  //print(accMgr.createUser('testUser', 'storedKey123'));
 }

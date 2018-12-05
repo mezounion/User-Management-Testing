@@ -1,0 +1,5 @@
+name: mezo_user_testing
+environment:
+    sdk: '>=2.0.0-dev.0.0 <3.0.0'
+dependencies:
+  objectdb: ^1.0.5

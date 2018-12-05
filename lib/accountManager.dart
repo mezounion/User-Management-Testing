@@ -28,6 +28,7 @@ class AccountManager {
     return IsValidUser;
   }
 
+//dont allow not 
   List<User> updateList(){
     File storedUsers = new File('lib/userList.txt');
     List<String> lines = new List<String>();
