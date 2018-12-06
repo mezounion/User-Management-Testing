@@ -14,11 +14,12 @@ void listInit(){
   //retrieve info from database and generate a list of users
 }
 
-void main(){
+void main() async{
   listInit();
   AccountManager accMgr = new AccountManager(userList);
   DatabaseHandler db = new DatabaseHandler();
   //db.loadTest();
-  db.dbTest();
+  User temp = await db.getUser("Cal");
+  print(temp.getID());
   //print(accMgr.createUser('testUser', 'storedKey123'));
 }

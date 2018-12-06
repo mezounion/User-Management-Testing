@@ -5,13 +5,13 @@ class Person{
 
   String id, storedKey;
 	double worth, spent, balance = 0;
-	List<Sector> holons;
+	List<Sector> sectors;
   bool acsessStatus = false;
 	
-	Person(String id, String storedKey, List<Sector> holons) {
+	Person(String id, String storedKey, List<Sector> sectors) {
 		this.id = id;
     this.storedKey = storedKey;
-		this.holons = holons;
+		this.sectors = sectors;
 	}
   
 	bool unlock(String key){
@@ -25,12 +25,12 @@ class Person{
     acsessStatus = false;
   }
 
-	void setHolons(List<Sector> h) {
-		holons = h;
+	void setSectors(List<Sector> h) {
+		sectors = h;
 	}
 	
-	List<Sector> getHolons(){
-		return holons;
+	List<Sector> getSectors(){
+		return sectors;
 	}
 	
 	String getID() {
